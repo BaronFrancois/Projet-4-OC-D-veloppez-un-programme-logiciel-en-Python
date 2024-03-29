@@ -4,6 +4,8 @@ from collections import defaultdict
 from datetime import datetime
 from random import shuffle, choice
 
+import views
+
 if os.path.exists('players.json'):
     with open('players.json', 'r') as f:
         players = json.load(f)
@@ -295,20 +297,8 @@ def list_tournaments():
 
 def main():
     while True:
-        print("\nMenu:")
-        print("1. Create tournament")
-        print("2. Modify tournament")
-        print("3. Create player")
-        print("4. List players")
-        print("5. Modify player")
-        print("6. Register players for tournament")
-        print("7. Launch tournament")
-        print("8. See ongoing matches")
-        print("9. Enter match results")
-        print("10. Summary of rounds")
-        print("11. Exit")
-
-        choice = input("Enter your choice: ")
+        choice = views.display_start_menu()
+        
 
         if choice == '1':
             create_tournament()
