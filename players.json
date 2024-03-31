@@ -4,5 +4,11 @@
         "first_name": "1",
         "birth_date": "1111-11-11",
         "chess_id": "11"
+    },
+    {
+        "last_name": "A",
+        "first_name": "a",
+        "birth_date": "1995",
+        "chess_id": "1234"
     }
 ]
