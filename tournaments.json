@@ -1,1 +1,12 @@
-[]
+[
+    {
+        "name": "nom_tournoi",
+        "location": "lieu_tournoi",
+        "start_date": "2024-03-31",
+        "end_date": "2024-04-02",
+        "num_rounds": 4,
+        "current_round": 1,
+        "rounds": [],
+        "players": []
+    }
+]

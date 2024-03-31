@@ -13,30 +13,32 @@ class Controller:
             self.view.display_menu()
             choice = self.view.get_user_choice()
 
-            if choice == '1':
-                self.create_tournament()
-            elif choice == '2':
-                self.modify_tournament()
-            elif choice == '3':
-                self.create_player()
-            elif choice == '4':
-                self.list_players()
-            elif choice == '5':
-                self.modify_player()
-            elif choice == '6':
-                self.register_players()
-            elif choice == '7':
-                self.launch_tournament()
-            elif choice == '8':
-                self.show_ongoing_matches()
-            elif choice == '9':
-                self.enter_match_results()
-            elif choice == '10':
-                self.summary_rounds()
-            elif choice == '11':
-                break
-            else:
-                print("Invalid choice. Please try again.")
+            match choice:
+                case '1':
+                    self.create_tournament()
+                case '2':
+                    self.modify_tournament()
+                case '3':
+                    self.create_player()
+                case '4':
+                    self.list_players()
+                case '5':
+                    self.modify_player()
+                case '6':
+                    self.register_players()
+                case '7':
+                    self.launch_tournament()
+                case '8':
+                    self.show_ongoing_matches()
+                case '9':
+                    self.enter_match_results()
+                case '10':
+                    self.summary_rounds()
+                case '11':
+                    break
+                case _:
+                    print("Invalid choice. Please try again.")
+
 
     def create_player(self):
         player = self.view.create_player()
@@ -88,7 +90,3 @@ class Controller:
         self.view.summary_rounds(self.tournaments[tournament_index])
 
 
-if __name__ == '__main__':
-    controller = Controller()
-    controller.run()
-    print("\n")
